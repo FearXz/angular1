@@ -1,0 +1,20 @@
+<p class="text-center h1 text-danger">Home Works!</p>
+
+<div class="d-flex justify-content-center">
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-primary" (click)="setPostStatus(true)">
+      Attivi
+    </button>
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="setPostStatus(false)"
+    >
+      Inattivi
+    </button>
+  </div>
+</div>
+
+<app-active-post *ngIf="postStatus == true"></app-active-post>
+
+<app-inactive-post *ngIf="postStatus == false"> </app-inactive-post>
