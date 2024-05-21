@@ -12,6 +12,7 @@ import { ActivePostComponent } from './comp/home-comp/active-post/active-post.co
 import { InactivePostComponent } from './comp/home-comp/inactive-post/inactive-post.component';
 import { PostDetailComponent } from './comp/home-comp/post-detail/post-detail.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TestComponent } from './comp/test/test.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     ActivePostComponent,
     InactivePostComponent,
     PostDetailComponent,
+    TestComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [provideClientHydration()],

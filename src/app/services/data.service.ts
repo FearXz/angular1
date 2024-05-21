@@ -7,9 +7,13 @@ import { post } from '../interfaces/interfaces';
   providedIn: 'root',
 })
 export class DataService {
+  object: post | null = null;
+
   constructor(private http: HttpClient) {}
 
   getPosts(): Observable<post> {
-    return this.http.get<post>('../../assets/db.json');
+    const objectTemp = this.http.get<post>('../../assets/db.json');
+    objectTemp.subscribe((data) => (this.object = data));
+    return objectTemp;
   }
 }
